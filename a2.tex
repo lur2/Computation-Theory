@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage{fullpage,amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{calc}  % arithmetic in length parameters
+\usepackage{enumitem}  % more control over list formatting
+\usepackage{fancyhdr}  % simpler headers and footers
+\usepackage[margin=1in]{geometry}  % page layout
+\usepackage{lastpage}  % for last page number
+\usepackage{relsize}  % easier font size changes
+\usepackage[normalem]{ulem}  % smarter underlining
+\usepackage{url}  % verb-like typesetting of URLs
+\usepackage{xfrac}  % nicer looking simple fractions for text and math
+
+%\usepackage[T1]{fontenc}  % use true 8-bit fonts
+%\usepackage{slantsc}  % allow slanted small-caps
+%\usepackage{microtype}  % perform various font optimizations
+%% Use Palatino-based monospace instead of kpfonts' default.
+%\usepackage{newpxtext}
+
+% Common macros.
+\input{./macros}
+\newcommand*\st{\mathrel{|}}  % "such that" for set extension
+
+
+\title{CSC236H, Fall 2018\\
+Assignment 2\\
+}
+\author{Ruizhe Lu}
+\renewcommand{\today}{~}
+\hypersetup{pdfpagemode=Fullscreen,
+  colorlinks=true,
+  linkfileprefix={}}
+
+\begin{document}
+\maketitle
+
+%begin questions
+\begin{enumerate}
+
+  %(1)
+  \item 
+    \begin{enumerate}
+  
+    % 0: *     
+    % 1: (**)    
+    % 2: ((**)*)   (*(**))     
+    % 3: ((**)(**))    (*((**)*))  (((**)*)*)   (*(*(**)))  ((*(**))*)
+    % 4: 
+    \item   \strong{Solution:} 
+            \begin{enumerate} [label=(\alph*)]
+            % base
+            \item 1
+
+            % 0 + 0
+            % 2c(0)
+            \item 1
+
+            % +4
+
+            % 1+1 || 0+2
+            \item 5
+
+            % +9
+
+            % 1+2 || 0+3
+            % 4      10
+            \item 14
+            \end{enumerate}
+
+    \item   \strong{Solution:}
+    % guess
+            \begin{equation}
+                c(n) = \begin{cases}
+                    1,  & n = 0 \\
+                    1,  & n = 1 \\
+                    c(n-1) + (n-1)^2,   & n > 1
+                \end{cases}
+            % why?
+    \end{equation}
+  \end{enumerate}
+
+
+
+%(2)
+\item   
+  \begin{enumerate}
+
+    %(a)
+    \item \strong{Solution:}
+    % 3 4 5
+
+    %base
+    % n=3: 1
+    % n=4: 1
+    % n=5: 1
+
+    % n=6: 3+3 1
+
+    %(b)
+    \item \strong{Solution:}
+
+
+
+\end{enumerate} 
+
+%(3)
+\item
+\begin{enumerate}
+  %(a)
+  \item \strong{Proof:}
+  %(b)
+  \item \strong{Proof:}
+  %(c)
+  \item \strong{Proof:}
+\end{enumerate} 
+
+%(4)
+\item
+\begin{enumerate}
+  %(a)
+  \item \strong{Proof:}
+  %(b)
+  \item \strong{Proof:}
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+\end{document}
